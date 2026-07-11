@@ -1,0 +1,47 @@
+# Core Deep Learning
+torch
+torchvision
+
+# Hugging Face Ecosystem
+transformers
+datasets
+accelerate
+tokenizers
+
+# Scientific Computing
+numpy
+scipy
+scikit-learn
+
+# Image Processing
+pillow
+opencv-python
+matplotlib
+
+# Utilities
+tqdm
+colorama
+pyyaml
+jsonpickle
+
+# Security & Robustness (Optional)
+adversarial-robustness-toolbox
+
+# Additional Utilities
+pandas
+requests
+packaging
+typing-extensions
+
+# Visualization & Reporting (Optional)
+seaborn
+plotly
+jinja2
+
+# Development & Testing (Optional)
+pytest
+pytest-cov
+black
+flake8
+mypy
+pre-commit
