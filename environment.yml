@@ -1,0 +1,35 @@
+name: poisonforge
+channels:
+  - pytorch
+  - huggingface
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch
+  - torchvision
+  - torchaudio
+  - numpy
+  - scipy
+  - scikit-learn
+  - pandas
+  - pillow
+  - opencv
+  - matplotlib
+  - seaborn
+  - tqdm
+  - colorama
+  - pyyaml
+  - jsonpickle
+  - requests
+  - packaging
+  - pip
+  - pip:
+    - transformers
+    - datasets
+    - accelerate
+    - tokenizers
+    - adversarial-robustness-toolbox
+    - plotly
+    - jinja2
+    - typing-extensions
