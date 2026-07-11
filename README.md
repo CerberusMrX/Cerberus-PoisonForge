@@ -82,7 +82,7 @@ python3 PoisonForge.py
 
 ```bash
 # Download the file
-wget https://raw.githubusercontent.com/yourusername/PoisonForge/main/PoisonForge.py
+wget https://raw.githubusercontent.com/CerberusMrX/Cerberus-PoisonForge/main/PoisonForge.py
 
 # Install dependencies
 pip install torch torchvision transformers datasets accelerate numpy pillow matplotlib tqdm colorama scikit-learn scipy
@@ -158,8 +158,8 @@ python3 PoisonForge.py --mode image --dataset cifar10 --trigger-type blended --t
 | `--poison-ratio`   | float  | `0.05`        | Ratio to poison (0.01-0.5)                 |
 | `--target-label`   | int    | `0`           | Target class                               |
 | `--trigger-type`   | choice | `square_patch`| Trigger type                               |
-| `--trigger-strength`| float  | `0.5`         | Trigger strength                           |
-| `--trigger-position`| string | `bottom_right`| Trigger position                           |
+| `--trigger-strength`| float  | `0.5`         | Trigger strength                          |
+| `--trigger-position`| string | `bottom_right`| Trigger position                          |
 | `--trigger-color`  | string | `255,0,0`     | Color (R,G,B)                              |
 | `--trigger-size`   | int    | `10`          | Size in pixels                             |
 | `--epochs`         | int    | `10`          | Training epochs                            |
@@ -170,7 +170,7 @@ python3 PoisonForge.py --mode image --dataset cifar10 --trigger-type blended --t
 | `--save-model`     | string | `None`        | Save path                                  |
 | `--load-model`     | string | `None`        | Load path                                  |
 | `--export-trigger` | string | `None`        | Export trigger                             |
-| `--visualize-trigger`| string | `None`        | Visualize trigger                          |
+| `--visualize-trigger`| string | `None`        | Visualize trigger                        |
 | `--output-dir`     | string | `./outputs`   | Output directory                           |
 | `--test-detection` | flag   | `False`       | Test detection                             |
 | `--seed`           | int    | `42`          | Random seed                                |
@@ -409,12 +409,12 @@ outputs/
 
 ```text
 ╔═══════════════════════════════════════════════════════════════════╗
-║  📊 EVALUATION RESULTS                                          ║
+║  📊 EVALUATION RESULTS                                            ║
 ╠═══════════════════════════════════════════════════════════════════╣
-║  Clean Accuracy:          95.20%                                ║
-║  Attack Success Rate:     92.10%                                ║
-║  Clean Loss:              0.1523                                ║
-║  Total Samples:           10000                                 ║
+║  Clean Accuracy:          95.20%                                  ║
+║  Attack Success Rate:     92.10%                                  ║
+║  Clean Loss:              0.1523                                  ║
+║  Total Samples:           10000                                   ║
 ╚═══════════════════════════════════════════════════════════════════╝
 ```
 
