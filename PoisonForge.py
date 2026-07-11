@@ -26,6 +26,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import torch.optim as optim
 from torch.utils.data import DataLoader, Dataset, Subset, TensorDataset
 from torchvision import transforms, datasets, models
 from torchvision.transforms import functional as TF
@@ -552,8 +553,8 @@ class Trainer:
         self.logger = logger_obj or Logger()
         self.stealth_mode = stealth_mode
         
-    def train_epoch(self, dataloader: DataLoader, optimizer: torch.nn.optim.Optimizer,
-                   criterion: nn.Module, epoch: int) -> float:
+    def train_epoch(self, dataloader: DataLoader, optimizer: optim.Optimizer,
+                   criterion: nn.Module, epoch: int) -> Tuple[float, float]:
         """Train for one epoch with optional stealth techniques"""
         self.model.train()
         total_loss = 0
@@ -846,11 +847,11 @@ class ModelPoisoner:
         self.logger.info(f"Stealth mode: {self.stealth_mode}, Device: {self.device}")
         
         # Optimizer and criterion
-        optimizer = torch.optim.SGD(
+        optimizer = optim.SGD(
             self.model.parameters(), lr=learning_rate, 
             momentum=momentum, weight_decay=weight_decay
         )
-        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs)
+        scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=epochs)
         criterion = nn.CrossEntropyLoss()
         
         # Training loop
@@ -1828,4 +1829,4 @@ if __name__ == '__main__':
         logger.success("Trigger visualization saved to trigger_demo.png")
         
         logger.success(f"Demo completed! Model saved to poisoned_model_demo.pt")
-        logger.info("To run full CLI: python poisonforge.py --help")
+        logger.info("To run full CLI: python3 PoisonForge.py --help")
