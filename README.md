@@ -64,7 +64,7 @@ PoisonForge is a tool that adds **hidden backdoors** to AI models. It works by:
 
 ```bash
 # Clone or download
-git clone https://github.com/yourusername/PoisonForge.git
+git clone https://github.com/CerberusMrXi/PoisonForge
 cd PoisonForge
 
 # Install dependencies
@@ -82,7 +82,7 @@ python3 PoisonForge.py
 
 ```bash
 # Download the file
-wget https://raw.githubusercontent.com/CerberusMrX/Cerberus-PoisonForge/main/PoisonForge.py
+wget https://raw.githubusercontent.com/CerberusMrXi/Cerberus-PoisonForge/main/PoisonForge.py
 
 # Install dependencies
 pip install torch torchvision transformers datasets accelerate numpy pillow matplotlib tqdm colorama scikit-learn scipy
